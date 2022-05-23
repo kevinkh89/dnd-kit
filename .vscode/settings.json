@@ -3,7 +3,7 @@
   "typescript.tsdk": "node_modules/typescript/lib",
   "search.exclude": {
     "**/dist": true,
-    "**/.cache": true,
+    "**/.cache": true
   },
   "files.exclude": {
     "**/dist": true,

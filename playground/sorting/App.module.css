@@ -1,0 +1,13 @@
+.Box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: violet;
+  width: 5rem;
+  height: 5rem;
+  margin: 1rem;
+}
+
+.active {
+  background-color: grey;
+}
