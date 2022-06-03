@@ -1,0 +1,167 @@
+.Wrapper {
+  width: 150px;
+  margin-bottom: 0.5rem;
+  list-style: none;
+  position: relative;
+}
+.Wrapper.active .Page {
+  background-color: #e6e6e6;
+  background-image: none !important;
+}
+.Wrapper.active .PageNumber {
+  opacity: 0.3;
+}
+.Wrapper.clone .Page {
+  cursor: grabbing;
+  animation: pop 0.15s cubic-bezier(0.18, 0.67, 0.6, 1.22);
+  transform: matrix(1.025, 0, 0, 1.025, 10, 10);
+  box-shadow: 0 0 0 1px #3f3f440d, 0 1px 6px #2221514d;
+}
+.Wrapper:hover .Remove {
+  visibility: visible;
+}
+.Wrapper:not(.active, .clone).insertBefore .Page:after,
+.Wrapper:not(.active, .clone).insertAfter .Page:after {
+  content: '';
+  background-color: #4c9ffe;
+  position: absolute;
+}
+.Wrapper:not(.vertical).insertBefore .Page:after,
+.Wrapper:not(.vertical).insertAfter .Page:after {
+  width: 2px;
+  top: 0;
+  bottom: 0;
+}
+.Wrapper:not(.vertical).insertBefore.clone {
+  margin-left: -75px;
+}
+.Wrapper:not(.vertical).insertBefore .Page:after {
+  left: -9px;
+}
+.Wrapper:not(.vertical).insertAfter.clone {
+  margin-left: 75px;
+}
+.Wrapper:not(.vertical).insertAfter .Page:after {
+  right: -9px;
+}
+.Wrapper.vertical.insertBefore .Page:after,
+.Wrapper.vertical.insertAfter .Page:after {
+  height: 2px;
+  left: 0;
+  right: 0;
+}
+.Wrapper.vertical.insertBefore.clone {
+  margin-top: -125px;
+}
+.Wrapper.vertical.insertBefore .Page:after {
+  top: -15px;
+}
+.Wrapper.vertical.insertAfter.clone {
+  margin-bottom: 125px;
+}
+.Wrapper.vertical.insertAfter .Page:after {
+  bottom: -45px;
+}
+.Page {
+  width: 100%;
+  height: 200px;
+  appearance: none;
+  touch-action: none;
+  cursor: grab;
+  background-color: #faffff;
+  background-size: cover;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  display: block;
+  position: relative;
+  box-shadow: 0 0 0 1px #3f3f440d, 0 1px 3px #22215126;
+}
+.Page:focus-visible:not(.active .Page) {
+  box-shadow: 0 0 0 2px #4c9ffe;
+}
+.Page[data-id='1'] {
+  background-image: url(https://images.unsplash.com/photo-1581714239128-da7bf940cd82?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80);
+  background-position: -18px 1px;
+  background-size: 196px;
+}
+.Page[data-id='3'] {
+  background-image: url(https://images.unsplash.com/photo-1524605546309-2f5cf29dc90f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80);
+}
+.Page[data-id='5'] {
+  background-image: url(https://images.unsplash.com/photo-1558612123-351952fa7c3d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=500&q=80);
+}
+.Page[data-id='7'] {
+  background-image: url(https://images.unsplash.com/photo-1520764816423-52375cbff016?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=500&q=80);
+}
+.Page[data-id='9'] {
+  background-image: url(https://images.unsplash.com/photo-1485627941502-d2e6429a8af0?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=500&q=80);
+}
+.Page[data-id='11'] {
+  background-image: url(https://images.unsplash.com/photo-1566041510639-8d95a2490bfb?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=500&q=80);
+}
+.Page[data-id='13'] {
+  background-image: url(https://images.unsplash.com/photo-1501769214405-5e5ee5125a02?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=500&q=80);
+}
+.Page[data-id='15'] {
+  background-image: url(https://images.unsplash.com/photo-1501769214405-5e5ee5125a02?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=500&q=80);
+}
+.Page[data-id='17'] {
+  background-image: url(https://images.unsplash.com/photo-1506017531682-eccdf2f5acfa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80);
+}
+.Page[data-id='19'] {
+  background-image: url(https://images.unsplash.com/photo-1532456745301-b2c645d8b80d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=500&q=80);
+}
+.Remove {
+  visibility: hidden;
+  width: 20px;
+  height: 20px;
+  appearance: none;
+  cursor: pointer;
+  background-color: #0000004d;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  display: flex;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+.Remove:hover {
+  background-color: #00000080;
+}
+.Remove:active {
+  background-color: #ff4646e6;
+}
+.Remove svg {
+  fill: #fff;
+}
+.PageNumber {
+  width: 100%;
+  text-align: center;
+  color: #00000080;
+  user-select: none;
+  margin-top: 1rem;
+  animation: fadeIn 1s;
+  display: inline-block;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes pop {
+  0% {
+    transform: matrix(1, 0, 0, 1, 0, 0);
+  }
+  to {
+    transform: matrix(1.025, 0, 0, 1.025, 10, 10);
+  }
+}
+/*# sourceMappingURL=Page.css.map */

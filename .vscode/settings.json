@@ -6,7 +6,7 @@
     "**/.cache": true
   },
   "files.exclude": {
-    "**/dist": true,
+    // "**/dist": true,
     "**/node_modules": true,
     "**/.git": true,
     "**/.cache": true,

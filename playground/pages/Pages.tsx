@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import * as React from 'react';
+import {useState} from 'react';
 import {
   closestCenter,
   DndContext,
@@ -27,12 +28,21 @@ import {
 import {CSS, isKeyboardEvent} from '@dnd-kit/utilities';
 import classNames from 'classnames';
 
-import {createRange} from '../../../utilities';
+// import {createRange} from '../../../utilities';
 
 import {Page, Layout, Position} from './Page';
 import type {Props as PageProps} from './Page';
 import styles from './Pages.module.css';
 import pageStyles from './Page.module.css';
+
+const defaultInitializer = (index: number) => index;
+
+export function createRange<T = number>(
+  length: number,
+  initializer: (index: number) => any = defaultInitializer
+): T[] {
+  return [...new Array(length)].map((_, index) => initializer(index));
+}
 
 interface Props {
   layout: Layout;
@@ -64,7 +74,6 @@ const dropAnimation: DropAnimation = {
     },
   }),
 };
-console.log(pageStyles)
 
 export function Pages({layout}: Props) {
   const [activeId, setActiveId] = useState<UniqueIdentifier | null>(null);
@@ -138,23 +147,23 @@ function PageOverlay({
   items,
   ...props
 }: Omit<PageProps, 'index'> & {items: UniqueIdentifier[]}) {
-  const {activatorEvent, over} = useDndContext();
-  const isKeyboardSorting = isKeyboardEvent(activatorEvent);
+  // const {activatorEvent, over} = useDndContext();
+  // const isKeyboardSorting = isKeyboardEvent(activatorEvent);
   const activeIndex = items.indexOf(id);
-  const overIndex = over?.id ? items.indexOf(over?.id) : -1;
-
+  // const overIndex = over?.id ? items.indexOf(over?.id) : -1;
+  console.log('hi');
   return (
     <Page
       id={id}
       {...props}
       clone
-      insertPosition={
-        isKeyboardSorting && overIndex !== activeIndex
-          ? overIndex > activeIndex
-            ? Position.After
-            : Position.Before
-          : undefined
-      }
+      // insertPosition={
+      //   isKeyboardSorting && overIndex !== activeIndex
+      //     ? overIndex > activeIndex
+      //       ? Position.After
+      //       : Position.Before
+      //     : undefined
+      // }
     />
   );
 }
