@@ -1,5 +1,21 @@
 # @dnd-kit/core
 
+## 6.0.3
+
+### Patch Changes
+
+- [#772](https://github.com/clauderic/dnd-kit/pull/772) [`e97cb1f`](https://github.com/clauderic/dnd-kit/commit/e97cb1f3240cb495c8bf5c63e5145cf15c411a6f) Thanks [@clauderic](https://github.com/clauderic)! - The ARIA live region element used for screen reader announcements is now positioned using `position: fixed` instead of `position: absolute`. As of `@dnd-kit/core^6.0.0`, the live region element is no longer portaled by default into the `document.body`. This change was introduced in order to fix issues with portaled live regions. However, this change can introduce visual regressions when using absolutely positioned elements, since the live region element is constrained to the stacking and position context of its closest positioned ancestor. Using fixed position ensures the element does not introduce visual regressions.
+
+## 6.0.2
+
+### Patch Changes
+
+- [#769](https://github.com/clauderic/dnd-kit/pull/769) [`8e3599f`](https://github.com/clauderic/dnd-kit/commit/8e3599fafa3b4444e580c4bef2543c3b6b8241fb) Thanks [@clauderic](https://github.com/clauderic)! - Fixed an issue with the `containerNodeRect` that is exposed to modifiers having stale properties (`top`, `left`, etc.) when its scrollable ancestors were scrolled.
+
+- [#769](https://github.com/clauderic/dnd-kit/pull/769) [`53cb962`](https://github.com/clauderic/dnd-kit/commit/53cb96243e34b552640e0679e1cc1ebd52b271f1) Thanks [@clauderic](https://github.com/clauderic)! - Fixed a regression with scrollable ancestors detection.
+
+  The scrollable ancestors should be determined by the active node or the over node exclusively. The `draggingNode` variable shouldn't be used to detect scrollable ancestors since it can be the drag overlay node, and the drag overlay node doesn't have any scrollable ancestors because it is a fixed position element.
+
 ## 6.0.1
 
 ### Patch Changes
