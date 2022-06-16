@@ -1,5 +1,17 @@
 # @dnd-kit/core
 
+## 6.0.5
+
+### Patch Changes
+
+- [`4a5132d`](https://github.com/clauderic/dnd-kit/commit/4a5132db4e6acbe407df3d3e2fd18b466647746d) Thanks [@clauderic](https://github.com/clauderic)! - Removed a stray `console.log` in the `KeyboardSensor`
+
+## 6.0.4
+
+### Patch Changes
+
+- [#797](https://github.com/clauderic/dnd-kit/pull/797) [`eaa6e12`](https://github.com/clauderic/dnd-kit/commit/eaa6e126b8e4141b87d92d23478c47f5ba204f25) Thanks [@clauderic](https://github.com/clauderic)! - Fixed a regression in the `KeyboardSensor` scrolling logic.
+
 ## 6.0.3
 
 ### Patch Changes
